@@ -90,7 +90,7 @@ def gradient_descent(X, Y, iterations, alpha):
     
     return W1, b1, W2, b2
 
-W1, b1, W2, b2 = gradient_descent(X_train, Y_train, 500, 0.1)
+W1, b1, W2, b2 = gradient_descent(X_train, Y_train, 20000, 0.1)
 
 def make_predictions(X, W1, b1, W2, b2):
     _, _, _, A2 = forward_prop(W1, b1, W2, b2, X)
@@ -108,8 +108,8 @@ def test_prediction(index, W1, b1, W2, b2):
     plt.gray()
     plt.imshow(current_image, interpolation='nearest')
     plt.show()
-    
-test_prediction(0, W1, b1, W2, b2)
+
+test_prediction(1000, W1, b1, W2, b2)
 test_prediction(1, W1, b1, W2, b2)
-test_prediction(2, W1, b1, W2, b2)
-test_prediction(3, W1, b1, W2, b2)
+test_prediction(1234, W1, b1, W2, b2)
+test_prediction(1000, W1, b1, W2, b2)
